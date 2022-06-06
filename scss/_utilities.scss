@@ -1,0 +1,155 @@
+.container {
+  max-width: $website-width;
+  margin: auto;
+  padding: 0 1.5rem;
+  overflow: hidden;
+}
+
+%btn-shared {
+  display: inline-block;
+
+  color: #fff;
+  font-weight: 600;
+
+  padding: 0.7rem 1.7rem;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+
+  transition: all 0.5s ease;
+
+  @media screen and (max-width: $medium-device) {
+    padding: 0.5rem 1.2rem;
+    font-weight: 400;
+    font-size: 0.7rem;
+  }
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    background-color: $main-color;
+
+    &:hover {
+      background-color: darken($main-color, 5%);
+    }
+  }
+
+  &-light {
+    @extend %btn-shared;
+    background-color: $light-color;
+    &:hover {
+      background-color: darken($light-color, 20%);
+    }
+  }
+
+  &-outline {
+    @extend %btn-shared;
+    background-color: transparent;
+    outline: 1px solid $light-color;
+    transition: $transition;
+
+    &:hover {
+      background-color: $light-color;
+      color: $dark-color;
+    }
+  }
+}
+
+@mixin flex-align() {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex($justify, $direction, $align) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
+@mixin grid() {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.text-center {
+  text-align: center;
+}
+
+//padding classes
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+//margin classes
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+.section {
+  &-title {
+    font-size: 1.7rem;
+    color: $main-color;
+
+    letter-spacing: 2px;
+
+    display: block;
+    padding-bottom: 0.2rem;
+
+    @extend .text-center;
+
+    @media screen and (max-width: $medium-device) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.bottom {
+  &-line {
+    position: relative;
+    left: 0.1rem;
+    width: 3rem;
+    height: 5px;
+    background-color: $main-color;
+    margin: 0 auto 1.2rem auto;
+  }
+}
+// Backgrounds
+.bg {
+  &-light {
+    background: $light-color;
+    color: $dark-color;
+  }
+
+  &-gradient {
+    background: $bg-gradient;
+    color: $light-color;
+  }
+}

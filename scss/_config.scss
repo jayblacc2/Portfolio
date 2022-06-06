@@ -1,0 +1,22 @@
+//Variables
+$website-width: 1170px;
+$main-color: #5e3aee; // #5463ff
+$header-bg-color: #f9f9fc;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+$btn-box-shadow: 5px 5px 15px rgba($medium-color, $alpha: 0.3);
+$transition: all 0.3s ease;
+//media query variables
+$small-device: 600px;
+$medium-device: 800px; //820px;
+$large-device: 1200px;
+
+$bg-contact: linear-gradient(rgba(0, 0, 0, 0.6), rgba(56, 55, 55, 0.66)),
+  url('../img/bg-contact-2.jpg');
+
+$bg-gradient: linear-gradient(
+  to bottom left,
+  rgba(96, 59, 241, 0.96) 50.7%,
+  rgba(58, 21, 206, 0.7) 70.35%
+);
