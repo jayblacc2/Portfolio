@@ -294,14 +294,19 @@ h4 {
 
 #header-home {
   background-image: linear-gradient(to bottom left, rgba(96, 59, 241, 0.96) 50.7%, rgba(58, 21, 206, 0.7) 70.35%);
-  height: 90vh;
+  height: 80vh;
+  padding-top: 2rem;
   color: #f4f4f4; }
+  @media screen and (max-width: 1200px) {
+    #header-home {
+      height: 40vh; } }
   @media screen and (max-width: 800px) {
     #header-home {
       height: 70vh; } }
   @media screen and (max-width: 600px) {
     #header-home {
-      height: 60vh; } }
+      padding: 3rem 0;
+      height: 50vh; } }
   #header-home .header-content {
     text-align: center;
     display: flex;
@@ -357,6 +362,9 @@ h4 {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem; }
+  @media screen and (max-width: 1200px) {
+    #about .about-info {
+      flex-direction: column; } }
   @media screen and (max-width: 800px) {
     #about .about-info {
       flex-direction: column; } }
@@ -374,6 +382,9 @@ h4 {
     width: 60%;
     border: 5px solid #5e3aee;
     border-radius: 5px; }
+    @media screen and (max-width: 1200px) {
+      #about .about-img div {
+        display: none; } }
   #about .about-img img {
     position: absolute;
     bottom: 7%;
@@ -383,7 +394,14 @@ h4 {
     object-fit: cover;
     display: block;
     padding: 1rem 0.5rem;
-    z-index: 3; }
+    z-index: 3;
+    border-radius: 4px; }
+    @media screen and (max-width: 1200px) {
+      #about .about-img img {
+        margin-right: 1.3rem;
+        padding: 0.3rem;
+        border: 3px solid #5463ff;
+        border-radius: 4px; } }
 
 #about .about-bio {
   flex: 2 0 15rem;
@@ -391,6 +409,9 @@ h4 {
   flex-direction: column;
   align-items: flex-start;
   padding: 0 2rem; }
+  @media screen and (max-width: 1200px) {
+    #about .about-bio {
+      align-items: center; } }
   @media screen and (max-width: 800px) {
     #about .about-bio {
       flex: 1;
@@ -418,6 +439,11 @@ h4 {
     text-align: left;
     padding-right: 3rem;
     line-height: 1.9; }
+    @media screen and (max-width: 1200px) {
+      #about .about-bio p {
+        width: 80%;
+        text-align: justify;
+        padding: 0 4rem; } }
     @media screen and (max-width: 600px) {
       #about .about-bio p {
         width: 100%;
@@ -543,18 +569,22 @@ h4 {
   #contact .text-fields input,
   #contact .text-fields textarea {
     border-radius: 3px;
-    border: 1px solid #5e3aee;
+    border: none;
     outline: 1px solid transparent;
     transition: all 0.5s ease;
-    font: inherit; }
-    @media screen and (max-width: 370px) {
-      #contact .text-fields input,
-      #contact .text-fields textarea {
-        width: 100%; } }
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Dosis', sans-serif;
+    background-color: #e9e6e6f3; }
     #contact .text-fields input:focus,
     #contact .text-fields textarea:focus {
       outline-color: #5e3aee;
       transition: all 0.3s ease; }
+    @media screen and (max-width: 370px) {
+      #contact .text-fields input,
+      #contact .text-fields textarea {
+        width: 100%; } }
   #contact .text-fields .name-input {
     grid-area: name; }
   #contact .text-fields .subject-input {
