@@ -39,6 +39,10 @@ h2,
 h3,
 h4 {
   text-transform: uppercase;
+
+  @media screen and (max-width: $medium-device) {
+    font-size: 14px;
+  }
 }
 // header starts
 //Logo
@@ -180,13 +184,14 @@ h4 {
 
     color: $light-color;
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (min-height: 1180px) {
+      height: 80%;
+    }
+
+    @media screen and (max-width: $tablet) and (max-width: $medium-device) {
       height: 40vh;
     }
 
-    @media screen and (max-width: $medium-device) {
-      height: 70vh;
-    }
     @media screen and (max-width: $small-device) {
       padding: 3rem 0;
       height: 50vh;
@@ -577,7 +582,7 @@ h4 {
       font-weight: 500;
 
       font-family: 'Dosis', sans-serif;
-      background-color: #e9e6e6f3;
+      background-color: #f4f4f4f3;
 
       &:focus {
         outline-color: $main-color;
@@ -669,4 +674,8 @@ h4 {
 
 .open {
   width: 0;
+}
+
+.body-wrapper {
+  // transform: translateX(-50%);
 }

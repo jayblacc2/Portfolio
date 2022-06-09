@@ -202,6 +202,11 @@ h2,
 h3,
 h4 {
   text-transform: uppercase; }
+  @media screen and (max-width: 800px) {
+    h2,
+    h3,
+    h4 {
+      font-size: 14px; } }
 
 #logo {
   width: 60px;
@@ -297,12 +302,12 @@ h4 {
   height: 80vh;
   padding-top: 2rem;
   color: #f4f4f4; }
-  @media screen and (max-width: 1200px) {
+  @media screen and (min-height: 1180px) {
+    #header-home {
+      height: 80%; } }
+  @media screen and (max-width: 1200px) and (max-width: 800px) {
     #header-home {
       height: 40vh; } }
-  @media screen and (max-width: 800px) {
-    #header-home {
-      height: 70vh; } }
   @media screen and (max-width: 600px) {
     #header-home {
       padding: 3rem 0;
@@ -576,7 +581,7 @@ h4 {
     font-size: 0.9rem;
     font-weight: 500;
     font-family: 'Dosis', sans-serif;
-    background-color: #e9e6e6f3; }
+    background-color: #f4f4f4f3; }
     #contact .text-fields input:focus,
     #contact .text-fields textarea:focus {
       outline-color: #5e3aee;
