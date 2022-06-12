@@ -216,6 +216,7 @@ h4 {
           padding: 0;
           margin: 0 auto 4rem auto;
           text-align: center;
+          padding: 0.3rem 1.2rem;
         }
         h1 {
           font-size: 3.5rem;
@@ -628,6 +629,7 @@ h4 {
   .footer-content {
     @include flex(space-between, row, center);
     min-height: 7rem;
+
     @media screen and (max-width: $medium-device) {
       flex-direction: column;
       font-size: 0.7rem;
@@ -644,6 +646,11 @@ h4 {
       text-align: center;
       padding: 0.2rem;
       transition: all 0.3s linear;
+
+      @media screen and (max-width: $medium-device) {
+        margin: 1rem 0;
+        position: relative;
+      }
 
       &:hover {
         background: $dark-color;
