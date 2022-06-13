@@ -657,3 +657,18 @@ h4 {
 
 .open {
   width: 0; }
+
+.modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000000ad;
+  opacity: 0; }
+  .modal-container {
+    width: 70%;
+    margin: 2rem auto;
+    min-height: 500px;
+    background-color: #5463ff;
+    border-radius: 5px; }
