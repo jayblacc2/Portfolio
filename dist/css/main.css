@@ -220,7 +220,7 @@ h4 {
   min-height: 3rem;
   padding: 0 3rem;
   position: relative;
-  background-image: linear-gradient(to bottom left, rgba(96, 59, 241, 0.96) 50.7%, rgba(58, 21, 206, 0.7) 70.35%); }
+  background: #603bf1f5; }
   #main-nav .menu {
     display: flex;
     align-items: center; }
