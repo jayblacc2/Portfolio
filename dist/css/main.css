@@ -170,6 +170,18 @@
     font-size: 1.2rem;
     opacity: 0.7;
     margin: 0; }
+  .item-text-link {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #ccc;
+    margin-top: 0.8rem;
+    display: inline-block;
+    color: #fcfcfc;
+    text-transform: lowercase;
+    border-radius: 50%;
+    transition: all 0.3s ease; }
+    .item-text-link:hover {
+      background-color: #e7e7e7;
+      color: #000; }
 
 *,
 *::after,
