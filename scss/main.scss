@@ -680,6 +680,13 @@ h4 {
     transform: translateY(-0.5rem);
   }
 }
+.open {
+  width: 0;
+}
+//TODO
+.body-wrapper {
+  // transform: translateX(-50%);
+}
 
 .modal {
   position: fixed;
@@ -697,12 +704,4 @@ h4 {
     background-color: #5463ff;
     border-radius: 5px;
   }
-}
-
-.open {
-  width: 0;
-}
-
-.body-wrapper {
-  // transform: translateX(-50%);
 }
