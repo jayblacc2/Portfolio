@@ -680,13 +680,6 @@ h4 {
     transform: translateY(-0.5rem);
   }
 }
-.open {
-  width: 0;
-}
-//TODO
-.body-wrapper {
-  // transform: translateX(-50%);
-}
 
 .modal {
   position: fixed;
@@ -695,13 +688,22 @@ h4 {
   top: 0;
   left: 0;
   background-color: #000000ad;
-  // opacity: 0;
+
+  opacity: 0;
+
+  &.open {
+    opacity: 1;
+  }
 
   &-container {
     width: 70%;
     margin: 2rem auto;
-    min-height: 500px;
+    min-height: 90vh;
     background-color: #5463ff;
     border-radius: 5px;
   }
+}
+
+.body-wrapper {
+  // transform: translateX(-50%);
 }
