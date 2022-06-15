@@ -2,7 +2,8 @@
 const scrollUp = document.querySelector('.scroll-up'),
   mobileMenu = document.querySelector('.menu-list'),
   menuIcon = document.querySelector('.menu-mobile'),
-  form = document.querySelector('form');
+  form = document.querySelector('form'),
+  myResume = document.querySelector('#my-resume');
 
 AOS.init({
   delay: 0,
@@ -50,4 +51,8 @@ form.addEventListener('submit', () => {
       return (input.value = '');
     });
   }, 3000);
+});
+
+myResume.addEventListener('click', () => {
+  document.querySelector('.modal').classList.add('open');
 });

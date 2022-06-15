@@ -360,8 +360,8 @@ h4 {
       }
 
       @media screen and (max-width: $small-device) {
-        padding: 0 2.3rem;
-        width: 80%;
+        padding: 0 2.1rem;
+        width: 85%;
         margin: 0 auto;
       }
 
@@ -680,7 +680,6 @@ h4 {
     transform: translateY(-0.5rem);
   }
 }
-
 .modal {
   position: fixed;
   height: 100%;
@@ -688,11 +687,15 @@ h4 {
   top: 0;
   left: 0;
   background-color: #000000ad;
-
   opacity: 0;
+  z-index: -1;
+  transform: scale(0);
+  transition: $transition;
 
   &.open {
     opacity: 1;
+    z-index: 1000;
+    transform: scale(1);
   }
 
   &-container {

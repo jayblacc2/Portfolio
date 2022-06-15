@@ -438,8 +438,8 @@ h4 {
       padding: 0; } }
   @media screen and (max-width: 600px) {
     #about .about-bio {
-      padding: 0 2.3rem;
-      width: 80%;
+      padding: 0 2.1rem;
+      width: 85%;
       margin: 0 auto; } }
   #about .about-bio h2 {
     position: relative; }
@@ -674,9 +674,14 @@ h4 {
   top: 0;
   left: 0;
   background-color: #000000ad;
-  opacity: 0; }
+  opacity: 0;
+  z-index: -1;
+  transform: scale(0);
+  transition: all 0.3s ease; }
   .modal.open {
-    opacity: 1; }
+    opacity: 1;
+    z-index: 1000;
+    transform: scale(1); }
   .modal-container {
     width: 70%;
     margin: 2rem auto;
