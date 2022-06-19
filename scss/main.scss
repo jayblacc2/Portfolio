@@ -59,8 +59,19 @@ h4 {
   min-height: 3rem;
   padding: 0 3rem;
   position: relative;
-
   background: #603bf1f5;
+
+  .logo-brand {
+    color: #fff;
+    color: #fff;
+    position: relative;
+
+    // &.mobile-logo {
+    //   position: absolute;
+    //   font-size: 1rem;
+    //   z-index: 12;
+    // }
+  }
 
   .menu {
     display: flex;
@@ -689,13 +700,13 @@ h4 {
   background-color: #000000ad;
   opacity: 0;
   z-index: -1;
-  transform: scale(0);
+  transform: translateY(-100%);
   transition: $transition;
 
   &.open {
     opacity: 1;
-    z-index: 1000;
-    transform: scale(1);
+    z-index: 100;
+    transform: translateY(0);
   }
 
   &-container {
@@ -704,9 +715,6 @@ h4 {
     min-height: 90vh;
     background-color: #5463ff;
     border-radius: 5px;
+    z-index: 101;
   }
-}
-
-.body-wrapper {
-  // transform: translateX(-50%);
 }
