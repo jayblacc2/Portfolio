@@ -421,13 +421,12 @@ h4 {
       .contact-btn {
         position: relative;
         overflow: hidden;
-        border: 2px solid $dark-color;
+        border: 1px solid $dark-color;
         @extend %btn-shared;
         color: #444;
 
-        @media screen and (max-width: $small-device) {
-          font-size: 0.7rem;
-        }
+        transition: $transition;
+
         @media screen and (max-width: $medium-device) {
           text-align: center;
 
@@ -449,12 +448,14 @@ h4 {
 
           color: $light-color;
 
-          transform: translateY(-100%);
+          transform: scale(0);
+          opacity: 0;
           transition: $transition;
         }
 
         &:hover:after {
-          transform: translateY(0);
+          transform: scale(100%);
+          opacity: 1;
           border: none;
         }
       }
