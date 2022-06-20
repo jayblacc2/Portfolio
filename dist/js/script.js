@@ -68,7 +68,6 @@ function addClass(selector, classSelector) {
 function closeMobileMenu() {
   links.forEach((link) => {
     link.addEventListener('click', (e) => {
-      console.log(e.target);
       mobileMenu.style.width = '0%';
     });
   });
