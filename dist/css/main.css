@@ -330,6 +330,7 @@ h4 {
       height: 50vh; } }
   #header-home .header-content {
     text-align: center;
+    padding-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -360,9 +361,10 @@ h4 {
           #header-home .header-content--text h1 {
             font-size: 2.3rem; } }
     #header-home .header-content-img {
-      width: 40%; }
+      width: 50%;
+      padding: 0.5rem 0 0 2rem; }
       #header-home .header-content-img img {
-        width: 80%; }
+        width: 90%; }
         @media screen and (max-width: 800px) {
           #header-home .header-content-img img {
             display: none; } }
