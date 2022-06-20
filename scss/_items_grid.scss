@@ -89,6 +89,10 @@
     font-size: 2rem;
     padding: 0 1rem;
     margin: 5rem 0 0 0;
+
+    @media screen and (max-width: $small-device) {
+      font-size: 1.5rem;
+    }
   }
   &-text-category {
     text-transform: uppercase;
