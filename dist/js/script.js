@@ -5,7 +5,8 @@ const scrollUp = document.querySelector('.scroll-up'),
   form = document.querySelector('form'),
   myResume = document.querySelector('#my-resume'),
   modal = document.querySelector('.modal'),
-  logoBrand = document.querySelector('.logo-brand');
+  logoBrand = document.querySelector('.logo-brand'),
+  links = document.querySelectorAll('.menu-item--link');
 
 AOS.init({
   delay: 0,
@@ -19,6 +20,7 @@ AOS.init({
 menuIcon.addEventListener('click', () => {
   if (mobileMenu.style.width === '100%') {
     mobileMenu.style.width = '0%';
+    closeMobileMenu();
   } else {
     mobileMenu.style.width = '100%';
   }
@@ -37,6 +39,7 @@ function slideUpBtn() {
   }
 }
 
+//form animation button
 form.addEventListener('submit', () => {
   const inputs = (document.querySelectorAll('input').value = '');
   const textarea = (document.querySelector('textarea').value = '');
@@ -61,3 +64,14 @@ document.querySelector('.modal').addEventListener('click', () => {
 function addClass(selector, classSelector) {
   selector.classList.add(classSelector);
 }
+
+function closeMobileMenu() {
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      console.log(e.target);
+      mobileMenu.style.width = '0%';
+    });
+  });
+}
+
+closeMobileMenu();
