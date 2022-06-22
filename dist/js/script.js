@@ -39,21 +39,7 @@ function slideUpBtn() {
   }
 }
 
-//form animation button
-form.addEventListener('submit', () => {
-  const inputs = (document.querySelectorAll('input').value = '');
-  const textarea = (document.querySelector('textarea').value = '');
-  console.log(inputs);
-
-  setTimeout(() => {
-    inputs.forEach((input) => {
-      return (input.value = '');
-    });
-  }, 3000);
-});
-
 myResume.addEventListener('click', () => {
-  // modal.classList.add('open');
   addClass(modal, 'open');
 });
 
