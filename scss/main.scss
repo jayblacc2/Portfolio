@@ -696,7 +696,7 @@ h4 {
 }
 .modal {
   position: fixed;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   top: 0;
   left: 0;
@@ -713,13 +713,18 @@ h4 {
   }
 
   &-container {
-    width: 60%;
+    width: 70%;
     height: 100%;
     margin: 2rem auto;
-    min-height: 90vh;
-    background-color: #5463ff;
+    min-height: 90%;
     border-radius: 5px;
     z-index: 101;
     overflow-y: scroll;
+  }
+
+  &-content {
+    @media screen and (max-height: $small-device) {
+      width: 100%;
+    }
   }
 }

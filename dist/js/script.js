@@ -27,6 +27,16 @@ menuIcon.addEventListener('click', () => {
 });
 
 document.addEventListener('scroll', slideUpBtn);
+
+myResume.addEventListener('click', () => {
+  addModalClass(modal, 'open');
+});
+
+document.querySelector('.modal').addEventListener('click', () => {
+  modal.classList.remove('open');
+  document.body.style['overflow'] = 'scroll';
+});
+
 // scrollT to Top button
 function slideUpBtn() {
   if (
@@ -39,16 +49,9 @@ function slideUpBtn() {
   }
 }
 
-myResume.addEventListener('click', () => {
-  addClass(modal, 'open');
-});
-
-document.querySelector('.modal').addEventListener('click', () => {
-  modal.classList.remove('open');
-});
-
-function addClass(selector, classSelector) {
+function addModalClass(selector, classSelector) {
   selector.classList.add(classSelector);
+  document.body.style['overflow'] = 'hidden';
 }
 
 function closeMobileMenu() {
