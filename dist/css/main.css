@@ -10,7 +10,7 @@
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
-  padding: 0.6rem 2rem;
+  padding: 0.6rem 1.4rem;
   cursor: pointer;
   border: none;
   border-radius: 3px;
@@ -46,7 +46,7 @@
   @media screen and (max-width: 800px) {
     .lead {
       font-size: 1.1rem; } }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 576px) {
     .lead {
       padding: 1rem 1.1rem;
       font-size: 1.1rem; } }
@@ -174,7 +174,7 @@
     font-size: 2rem;
     padding: 0 1rem;
     margin: 5rem 0 0 0; }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 576px) {
       .item-text-title {
         font-size: 1.5rem; } }
   .item-text-category {
@@ -254,7 +254,7 @@ h4 {
     align-items: center; }
     #main-nav .menu-list {
       display: flex; }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 576px) {
         #main-nav .menu-list {
           position: fixed;
           bottom: 0;
@@ -294,7 +294,7 @@ h4 {
           right: 0; }
         #main-nav .menu-item--link:hover:before, #main-nav .menu-item--link:hover:after {
           width: 100%; }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 576px) {
       #main-nav .menu {
         padding-bottom: 0.45rem;
         margin-top: 6px; }
@@ -336,7 +336,7 @@ h4 {
   @media screen and (min-height: 800px) {
     #header-home {
       height: 80%; } }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 576px) {
     #header-home {
       padding: 0.5rem 0;
       height: 40vh; } }
@@ -351,7 +351,7 @@ h4 {
       width: 50%;
       text-align: left;
       padding: 2rem 4rem; }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 576px) {
         #header-home .header-content--text {
           width: 80%;
           padding: 0;
@@ -375,7 +375,7 @@ h4 {
         @media screen and (max-width: 800px) {
           #header-home .header-content-img img {
             width: 80%; } }
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 576px) {
           #header-home .header-content-img img {
             display: none; } }
     #header-home .header-content-social {
@@ -399,7 +399,7 @@ h4 {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 576px) {
     #about .about-info {
       flex-direction: column-reverse; } }
 
@@ -416,7 +416,7 @@ h4 {
     width: 60%;
     border: 5px solid #5e3aee;
     border-radius: 5px; }
-    @media screen and (max-width: 800px), (max-width: 500px), (min-height: 1180px) {
+    @media screen and (max-width: 800px), (max-width: 576px), (min-height: 1180px) {
       #about .about-img div {
         display: none; } }
   #about .about-img img {
@@ -430,13 +430,13 @@ h4 {
     padding: 1rem 0.5rem;
     z-index: 3;
     border-radius: 4px; }
-    @media screen and (max-width: 800px), (min-height: 1180px), (max-width: 500px) {
+    @media screen and (max-width: 800px), (min-height: 1180px), (max-width: 576px) {
       #about .about-img img {
         padding: 0.3rem;
         border: 3px solid #5463ff;
         border-radius: 4px;
         width: 90%; } }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 576px) {
       #about .about-img img {
         position: relative;
         left: 1.5rem; } }
@@ -451,7 +451,7 @@ h4 {
     #about .about-bio {
       flex: 1 0 10rem;
       padding: 0; } }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 576px) {
     #about .about-bio {
       margin: 0 2rem 2rem; } }
   #about .about-bio h2 {
@@ -480,7 +480,7 @@ h4 {
         padding: 0 0.5rem 0 0;
         line-height: 35px;
         width: 100%; } }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 576px) {
       #about .about-bio p {
         font-size: 0.9rem;
         text-align: justify;
@@ -560,7 +560,7 @@ h4 {
     #contact .container {
       padding: 0; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   #contact .container {
     padding: 0; } }
 
@@ -699,12 +699,13 @@ h4 {
     transform: translateY(0); }
   .modal-container {
     width: 70%;
-    height: 100%;
+    height: 40%;
     margin: 2rem auto;
     min-height: 90%;
     border-radius: 5px;
     z-index: 101;
-    overflow-y: scroll; }
-  @media screen and (max-height: 500px) {
-    .modal-content {
-      width: 100%; } }
+    overflow-y: scroll;
+    text-align: center; }
+    @media screen and (max-height: 576px) {
+      .modal-container {
+        width: 100%; } }

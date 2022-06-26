@@ -20,9 +20,9 @@ AOS.init({
 menuIcon.addEventListener('click', () => {
   if (mobileMenu.style.width === '100%') {
     mobileMenu.style.width = '0%';
-    closeMobileMenu();
   } else {
     mobileMenu.style.width = '100%';
+    closeMobileMenu();
   }
 });
 
@@ -32,7 +32,7 @@ myResume.addEventListener('click', () => {
   addModalClass(modal, 'open');
 });
 
-document.querySelector('.modal').addEventListener('click', () => {
+modal.addEventListener('click', () => {
   modal.classList.remove('open');
   document.body.style['overflow'] = 'scroll';
 });
@@ -61,5 +61,3 @@ function closeMobileMenu() {
     });
   });
 }
-
-closeMobileMenu();
