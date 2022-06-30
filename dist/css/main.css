@@ -34,7 +34,9 @@
 .btn-outline {
   background-color: transparent;
   outline: 1px solid #f4f4f4;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  -webkit-animation: scale-up-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate both;
+  animation: scale-up-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate both; }
   .btn-outline:hover {
     background-color: #f4f4f4;
     color: #333; }
@@ -103,6 +105,22 @@
 .bg-gradient {
   background: linear-gradient(to bottom left, rgba(96, 59, 241, 0.96) 50.7%, rgba(58, 21, 206, 0.7) 70.35%);
   color: #f4f4f4; }
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); } }
 
 .items {
   display: grid;
@@ -374,7 +392,7 @@ h4 {
           #header-home .header-content-img img {
             display: none; } }
     #header-home .header-content-social {
-      margin-bottom: 1rem; }
+      margin: 0 0 1.3rem -0.5rem; }
       #header-home .header-content-social i {
         font-size: 1.2rem;
         color: #f5f5f5; }
@@ -705,3 +723,5 @@ h4 {
     @media screen and (max-height: 576px) {
       .modal-container {
         width: 100%; } }
+    .modal-container .btn-download {
+      color: #c9c8c8; }
