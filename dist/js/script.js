@@ -1,3 +1,5 @@
+'use strict';
+
 //variables
 const scrollUp = document.querySelector('.scroll-up'),
   mobileMenu = document.querySelector('.menu-list'),

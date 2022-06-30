@@ -251,7 +251,7 @@ h4 {
         }
       }
       &-social {
-        margin-bottom: 1rem;
+        margin: 0 0 1.3rem -0.5rem;
         i {
           font-size: 1.2rem;
           color: #f5f5f5;
@@ -714,6 +714,7 @@ h4 {
     }
 
     .btn-download {
+      color: #c9c8c8;
     }
   }
 }
