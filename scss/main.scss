@@ -96,12 +96,16 @@ h4 {
         transition: $transition;
         color: $main-color;
 
-        @media (max-width: $small-device) {
-          color: #fff;
-        }
-
         &:hover {
           color: lighten($main-color, 10%);
+
+          @media (max-width: $small-device) {
+            color: darken($light-color, 10%);
+          }
+        }
+
+        @media (max-width: $small-device) {
+          color: #fff;
         }
 
         &:before,

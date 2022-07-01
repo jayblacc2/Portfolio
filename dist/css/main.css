@@ -301,11 +301,14 @@ h4 {
         padding-bottom: 0.5rem;
         transition: all 0.3s ease;
         color: #5e3aee; }
+        #main-nav .menu-item--link:hover {
+          color: #8469f2; }
+          @media (max-width: 576px) {
+            #main-nav .menu-item--link:hover {
+              color: #dbdbdb; } }
         @media (max-width: 576px) {
           #main-nav .menu-item--link {
             color: #fff; } }
-        #main-nav .menu-item--link:hover {
-          color: #8469f2; }
         #main-nav .menu-item--link:before, #main-nav .menu-item--link:after {
           position: absolute;
           content: '';
