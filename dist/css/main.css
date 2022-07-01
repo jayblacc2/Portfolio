@@ -272,8 +272,8 @@ h4 {
   position: relative; }
   #main-nav #logo {
     padding-top: 0.5rem;
-    width: 3.125rem;
-    height: 3.125rem; }
+    width: 50px;
+    height: 50px; }
   #main-nav .menu {
     display: flex;
     align-items: center; }
@@ -392,15 +392,12 @@ h4 {
           text-align: center;
           padding: 0.3rem 1.2rem; } }
       #header-home .header-content--text h1 {
-        font-size: 2rem;
+        font-size: 2.3rem;
         line-height: 1.1;
         text-transform: uppercase; }
-        @media screen and (min-height: 1180px) {
+        @media screen and (max-width: 576px) {
           #header-home .header-content--text h1 {
-            font-size: 2.2rem; } }
-        @media screen and (max-width: 800px) {
-          #header-home .header-content--text h1 {
-            font-size: 2.3rem; } }
+            font-size: 2rem; } }
     #header-home .header-content-img {
       width: 50%; }
       #header-home .header-content-img img {
