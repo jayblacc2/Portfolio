@@ -299,9 +299,8 @@ h4 {
         text-transform: uppercase;
         font-weight: 600;
         padding-bottom: 0.5rem;
-        transition: all 0.3s ease;
-        color: #5e3aee; }
-        @media screen and (max-height: 1200px) {
+        transition: all 0.3s ease; }
+        @media screen and (max-height: 800px) {
           #main-nav .menu-item--link {
             color: #f4f4f4; } }
         #main-nav .menu-item--link:hover {

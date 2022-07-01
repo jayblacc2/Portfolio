@@ -94,9 +94,9 @@ h4 {
         font-weight: 600;
         padding-bottom: 0.5rem;
         transition: $transition;
-        color: $main-color;
+        // color: $main-color;
 
-        @media screen and (max-height: $tablet) {
+        @media screen and (max-height: $medium-device) {
           color: $light-color;
         }
 
