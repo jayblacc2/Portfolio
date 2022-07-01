@@ -25,7 +25,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $light-color;
+  color: $dark-color;
 }
 img {
   max-width: 100%;
@@ -49,14 +49,13 @@ h4 {
 
 // Main-Nav
 #main-nav {
+  @extend .bg-light;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 3rem;
   padding: 0 3rem;
   position: relative;
-  background: #603bf1f5;
-
   #logo {
     padding-top: 0.5rem;
     width: 3.125rem;
@@ -74,7 +73,7 @@ h4 {
         position: fixed;
         bottom: 0;
         right: 0;
-        background-color: $main-color;
+        background-color: rgba(0, 0, 0, 0.8);
         height: 100vh;
         width: 0%;
         z-index: 98;
@@ -90,18 +89,19 @@ h4 {
 
       &--link {
         position: relative;
-
         text-decoration: none;
-        color: darken($light-color, 10%);
-
         text-transform: uppercase;
         font-weight: 600;
+
+        @media screen and (max-height: $medium-device) {
+          color: $light-color;
+        }
 
         padding-bottom: 0.5rem;
         transition: $transition;
 
         &:hover {
-          color: lighten($light-color, 5%);
+          color: $main-color;
         }
 
         &:before,
@@ -145,7 +145,7 @@ h4 {
           position: relative;
           width: 25px;
           height: 3px;
-          background-color: $light-color;
+          background-color: $main-color;
           display: block;
           border-radius: 3px;
 
@@ -155,7 +155,7 @@ h4 {
             content: '';
             width: 25px;
             height: 3px;
-            background-color: $light-color;
+            background-color: $main-color;
             border-radius: 3px;
             display: inline-block;
 
@@ -179,11 +179,10 @@ h4 {
 
 #header {
   &-home {
-    background-image: $bg-gradient;
+    // background-color: $medium-color;
+    @extend .bg-light;
     height: 80vh;
     padding: 2rem 2rem;
-
-    color: $light-color;
 
     @media screen and (min-height: $landscape-table) {
       height: 80%;
@@ -207,6 +206,10 @@ h4 {
       align-items: center;
       flex-wrap: wrap;
 
+      @media screen and (max-width: $small-device) {
+        padding-top: 0;
+      }
+
       &--text {
         width: 50%;
         text-align: left;
@@ -221,9 +224,9 @@ h4 {
         }
 
         h1 {
-          font-size: 3.5rem;
-          color: #f5f5f5;
-          line-height: 1.2;
+          font-size: 2rem;
+          line-height: 1.1;
+          text-transform: uppercase;
 
           @media screen and (min-height: $landscape-table) {
             font-size: 2.2rem;
@@ -254,7 +257,6 @@ h4 {
         margin: 0 0 1.3rem -0.5rem;
         i {
           font-size: 1.2rem;
-          color: #f5f5f5;
         }
 
         a {
@@ -269,7 +271,8 @@ h4 {
           transition: all 0.3s ease;
 
           &:hover {
-            background-color: darken(#d2cfcf27, 20%);
+            background-color: darken($medium-color, 50%);
+            color: $light-color;
             transform: scale(1.3);
           }
         }
