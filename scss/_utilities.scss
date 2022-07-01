@@ -51,8 +51,6 @@
     border: 2px solid transparent;
     transition: $transition;
 
-    //
-
     -webkit-animation: color-change 2s linear infinite alternate both,
       scale-up 0.6s linear infinite alternate both;
     animation: color-change 2s linear infinite alternate both,
@@ -60,7 +58,7 @@
 
     &:hover {
       color: $medium-color;
-      background: transparent;
+      box-shadow: $btn-box-shadow;
     }
   }
 }
@@ -195,7 +193,7 @@
   }
 }
 
-@-webkit-keyframes change-color {
+@-webkit-keyframes color-change {
   0% {
     background: $main-color;
   }

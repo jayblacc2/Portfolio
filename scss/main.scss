@@ -49,13 +49,14 @@ h4 {
 
 // Main-Nav
 #main-nav {
-  @extend .bg-light;
+  background-color: $light-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 3rem;
   padding: 0 3rem;
   position: relative;
+
   #logo {
     padding-top: 0.5rem;
     width: 3.125rem;
@@ -69,7 +70,6 @@ h4 {
     &-list {
       display: flex;
       @media screen and (max-width: $small-device) {
-        // display: none;
         position: fixed;
         bottom: 0;
         right: 0;
@@ -92,16 +92,16 @@ h4 {
         text-decoration: none;
         text-transform: uppercase;
         font-weight: 600;
+        padding-bottom: 0.5rem;
+        transition: $transition;
+        color: $main-color;
 
-        @media screen and (max-height: $medium-device) {
+        @media screen and (max-height: $tablet) {
           color: $light-color;
         }
 
-        padding-bottom: 0.5rem;
-        transition: $transition;
-
         &:hover {
-          color: $main-color;
+          color: lighten($main-color, 10%);
         }
 
         &:before,
@@ -128,6 +128,7 @@ h4 {
         &:hover:before,
         &:hover:after {
           width: 100%;
+          background-color: lighten($main-color, 10%);
         }
       }
     }
@@ -368,6 +369,7 @@ h4 {
 
       h2 {
         position: relative;
+        margin: 0.7rem 0;
       }
 
       h2:after {
@@ -395,7 +397,7 @@ h4 {
           text-align: justify;
           margin: 0.2rem 0;
           padding: 0 0.5rem 0 0;
-          line-height: 35px;
+
           width: 100%;
         }
 
@@ -414,12 +416,12 @@ h4 {
         border: 1px solid $dark-color;
         @extend %btn-shared;
         color: #444;
+        margin-top: 0.7rem;
 
         transition: $transition;
 
         @media screen and (max-width: $medium-device) {
           text-align: center;
-
           font-size: 0.9rem;
         }
 

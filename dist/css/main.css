@@ -39,7 +39,7 @@
   animation: color-change 2s linear infinite alternate both, scale-up 0.6s linear infinite alternate both; }
   .btn-outline:hover {
     color: #ccc;
-    background: transparent; }
+    box-shadow: 5px 5px 15px rgba(204, 204, 204, 0.3); }
 
 .lead {
   font-size: 1.3rem;
@@ -98,7 +98,7 @@
   background-color: #5e3aee;
   margin: 0 auto 1.2rem auto; }
 
-.bg-light, #main-nav, #header-home {
+.bg-light, #header-home {
   background: #f4f4f4;
   color: #242323; }
 
@@ -122,7 +122,7 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1); } }
 
-@-webkit-keyframes change-color {
+@-webkit-keyframes color-change {
   0% {
     background: #5e3aee; }
   100% {
@@ -263,6 +263,7 @@ h4 {
       font-size: 14px; } }
 
 #main-nav {
+  background-color: #f4f4f4;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -298,12 +299,13 @@ h4 {
         text-transform: uppercase;
         font-weight: 600;
         padding-bottom: 0.5rem;
-        transition: all 0.3s ease; }
-        @media screen and (max-height: 800px) {
+        transition: all 0.3s ease;
+        color: #5e3aee; }
+        @media screen and (max-height: 1200px) {
           #main-nav .menu-item--link {
             color: #f4f4f4; } }
         #main-nav .menu-item--link:hover {
-          color: #5e3aee; }
+          color: #8469f2; }
         #main-nav .menu-item--link:before, #main-nav .menu-item--link:after {
           position: absolute;
           content: '';
@@ -319,7 +321,8 @@ h4 {
           bottom: 30px;
           right: 0; }
         #main-nav .menu-item--link:hover:before, #main-nav .menu-item--link:hover:after {
-          width: 100%; }
+          width: 100%;
+          background-color: #8469f2; }
     @media screen and (max-width: 576px) {
       #main-nav .menu {
         padding-bottom: 0.45rem;
@@ -483,7 +486,8 @@ h4 {
     #about .about-bio {
       margin: 0 2rem 2rem; } }
   #about .about-bio h2 {
-    position: relative; }
+    position: relative;
+    margin: 0.7rem 0; }
   #about .about-bio h2:after {
     position: absolute;
     content: '';
@@ -506,7 +510,6 @@ h4 {
         text-align: justify;
         margin: 0.2rem 0;
         padding: 0 0.5rem 0 0;
-        line-height: 35px;
         width: 100%; } }
     @media screen and (max-width: 576px) {
       #about .about-bio p {
@@ -520,6 +523,7 @@ h4 {
     overflow: hidden;
     border: 1px solid #333;
     color: #444;
+    margin-top: 0.7rem;
     transition: all 0.3s ease; }
     @media screen and (max-width: 800px) {
       #about .about-bio .contact-btn {
