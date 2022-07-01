@@ -73,7 +73,7 @@ h4 {
         position: fixed;
         bottom: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(28, 27, 27, 0.864);
         height: 100vh;
         width: 0%;
         z-index: 98;
@@ -94,10 +94,10 @@ h4 {
         font-weight: 600;
         padding-bottom: 0.5rem;
         transition: $transition;
-        // color: $main-color;
+        color: $main-color;
 
-        @media screen and (max-height: $medium-device) {
-          color: $light-color;
+        @media (max-width: $small-device) {
+          color: #fff;
         }
 
         &:hover {
