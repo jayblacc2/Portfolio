@@ -269,7 +269,9 @@ h4 {
   align-items: center;
   min-height: 3rem;
   padding: 0 3rem;
-  position: relative; }
+  position: sticky;
+  top: 0;
+  z-index: 12; }
   #main-nav #logo {
     padding-top: 0.5rem;
     width: 50px;
@@ -368,7 +370,7 @@ h4 {
       height: 80%; } }
   @media screen and (max-width: 576px) {
     #header-home {
-      padding: 0.5rem 0;
+      padding: 2rem 0rem;
       height: 40vh; } }
   #header-home .header-content {
     text-align: center;

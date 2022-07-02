@@ -55,7 +55,9 @@ h4 {
   align-items: center;
   min-height: 3rem;
   padding: 0 3rem;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 12;
 
   #logo {
     padding-top: 0.5rem;
@@ -198,7 +200,7 @@ h4 {
     }
 
     @media screen and (max-width: $small-device) {
-      padding: 0.5rem 0;
+      padding: 2rem 0rem;
       height: 40vh;
     }
 
