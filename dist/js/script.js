@@ -2,12 +2,13 @@
 
 //variables
 const scrollUp = document.querySelector('.scroll-up'),
+  logoBrand = document.querySelector('.logo-brand'),
   mobileMenu = document.querySelector('.menu-list'),
   menuIcon = document.querySelector('.menu-mobile'),
-  form = document.querySelector('form'),
   myResume = document.querySelector('#my-resume'),
+  form = document.querySelector('form'),
+  inputs = document.querySelectorAll('input'),
   modal = document.querySelector('.modal'),
-  logoBrand = document.querySelector('.logo-brand'),
   links = document.querySelectorAll('.menu-item--link');
 
 AOS.init({
@@ -63,3 +64,6 @@ function closeMobileMenu() {
     });
   });
 }
+
+//form event listener
+document.querySelector('#btn-submit').addEventListener('submit', () => {});
