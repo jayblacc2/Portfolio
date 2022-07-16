@@ -66,4 +66,9 @@ function closeMobileMenu() {
 }
 
 //form event listener
-document.querySelector('#btn-submit').addEventListener('submit', () => {});
+document.querySelector('#btn-submit').addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (inputs[0].value) {
+    console.log('enpty');
+  }
+});
