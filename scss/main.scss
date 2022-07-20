@@ -721,7 +721,19 @@ h4 {
     }
 
     .btn-download {
-      color: #c9c8c8;
+      color: #fff;
+      background: $dark-color;
+      padding: 0.7rem 1rem;
+      border-radius: 3px;
+      transition: $transition;
+
+      &:hover {
+        background: lighten($dark-color, 5%);
+      }
     }
+  }
+
+  &-content {
+    margin-bottom: 1.5rem;
   }
 }
