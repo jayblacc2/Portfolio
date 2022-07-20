@@ -25,7 +25,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $light-color;
+  color: $dark-color;
 }
 img {
   max-width: 100%;
@@ -46,21 +46,24 @@ h4 {
 }
 // header starts
 //Logo
-#logo {
-  width: 60px;
-  height: 60px;
-  color: #fff;
-}
+
 // Main-Nav
 #main-nav {
+  background-color: $light-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 3rem;
   padding: 0 3rem;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 12;
 
-  background: #603bf1f5;
+  #logo {
+    padding-top: 0.5rem;
+    width: 50px;
+    height: 50px;
+  }
 
   .menu {
     display: flex;
@@ -69,11 +72,10 @@ h4 {
     &-list {
       display: flex;
       @media screen and (max-width: $small-device) {
-        // display: none;
         position: fixed;
         bottom: 0;
         right: 0;
-        background-color: $main-color;
+        background-color: rgba(28, 27, 27, 0.864);
         height: 100vh;
         width: 0%;
         z-index: 98;
@@ -89,18 +91,23 @@ h4 {
 
       &--link {
         position: relative;
-
         text-decoration: none;
-        color: darken($light-color, 10%);
-
         text-transform: uppercase;
         font-weight: 600;
-
         padding-bottom: 0.5rem;
         transition: $transition;
+        color: $main-color;
 
         &:hover {
-          color: lighten($light-color, 5%);
+          color: lighten($main-color, 10%);
+
+          @media (max-width: $small-device) {
+            color: darken($light-color, 10%);
+          }
+        }
+
+        @media (max-width: $small-device) {
+          color: #fff;
         }
 
         &:before,
@@ -127,6 +134,7 @@ h4 {
         &:hover:before,
         &:hover:after {
           width: 100%;
+          background-color: lighten($main-color, 10%);
         }
       }
     }
@@ -144,7 +152,7 @@ h4 {
           position: relative;
           width: 25px;
           height: 3px;
-          background-color: $light-color;
+          background-color: $main-color;
           display: block;
           border-radius: 3px;
 
@@ -154,7 +162,7 @@ h4 {
             content: '';
             width: 25px;
             height: 3px;
-            background-color: $light-color;
+            background-color: $main-color;
             border-radius: 3px;
             display: inline-block;
 
@@ -178,94 +186,96 @@ h4 {
 
 #header {
   &-home {
-    background-image: $bg-gradient;
+    // background-color: $medium-color;
+    @extend .bg-light;
     height: 80vh;
-    padding-top: 2rem;
-
-    color: $light-color;
+    padding: 2rem 2rem;
 
     @media screen and (min-height: $landscape-table) {
       height: 80%;
     }
 
-    @media screen and (max-width: $tablet) and (max-width: $medium-device) {
-      height: 40vh;
+    @media screen and (min-height: $medium-device) {
+      height: 80%;
     }
 
     @media screen and (max-width: $small-device) {
-      padding: 3rem 0;
-      height: 50vh;
+      padding: 2rem 0rem;
+      height: 40vh;
     }
 
     //Header Content
     .header-content {
       text-align: center;
-
+      padding-top: 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+
+      @media screen and (max-width: $small-device) {
+        padding-top: 0;
+      }
 
       &--text {
         width: 50%;
         text-align: left;
         padding: 2rem 4rem;
 
-        @media screen and (max-width: $medium-device) {
+        @media screen and (max-width: $small-device) {
           width: 80%;
           padding: 0;
           margin: 0 auto 4rem auto;
           text-align: center;
           padding: 0.3rem 1.2rem;
         }
+
         h1 {
-          font-size: 3.5rem;
-          color: #f5f5f5;
-          line-height: 1.2;
-          @media screen and (min-height: $landscape-table) {
-            font-size: 2.2rem;
-          }
+          font-size: 2.3rem;
+          line-height: 1.1;
+          text-transform: uppercase;
 
-          @media screen and (max-width: $medium-device) {
-            font-size: 2.7rem;
-            padding-bottom: 1rem;
-          }
-
-          @media screen and (max-width: $medium-device) {
-            font-size: 2.3rem;
+          @media screen and (max-width: $small-device) {
+            font-size: 2rem;
           }
         }
       }
 
       &-img {
-        width: 40%;
+        width: 50%;
 
         img {
-          width: 80%;
+          width: 90%;
+
           @media screen and (max-width: $medium-device) {
+            width: 80%;
+          }
+
+          @media screen and (max-width: $small-device) {
             display: none;
           }
         }
       }
       &-social {
+        margin: 0 0 1.3rem -0.5rem;
         i {
           font-size: 1.2rem;
-          color: #f5f5f5;
         }
-        margin-bottom: 1rem;
+
         a {
           background-color: #d2cfcf27;
           display: inline-block;
 
-          padding: 0.07rem 0.4rem;
-          margin: 0 1.4rem 0.7rem 0;
+          padding: 0.1rem 0.4rem;
+          margin: 0 0.5rem;
 
           border-radius: 3px;
 
           transition: all 0.3s ease;
 
           &:hover {
-            background-color: darken(#d2cfcf27, 20%);
+            background-color: darken($medium-color, 50%);
+            color: $light-color;
             transform: scale(1.3);
           }
         }
@@ -281,27 +291,16 @@ h4 {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-
-      // min-height: 31.25rem;
       gap: 2rem;
 
-      @media screen and (max-width: $tablet) {
-        flex-direction: column;
-      }
-
-      @media screen and (max-width: $medium-device) {
-        flex-direction: column;
+      @media screen and (max-width: $small-device) {
+        flex-direction: column-reverse;
       }
     }
     &-img {
       position: relative;
       flex: 1 0 15rem;
       margin-right: 2rem;
-
-      // @media screen and (max-width: $medium-device) {
-      //   flex-direction: column;
-      //   margin-right: 2rem;
-      // }
 
       div {
         position: absolute;
@@ -314,7 +313,9 @@ h4 {
         border: 5px solid $main-color;
         border-radius: 5px;
 
-        @media screen and (max-width: $tablet) {
+        @media screen and (max-width: $medium-device),
+          (max-width: $small-device),
+          (min-height: $landscape-table) {
           display: none;
         }
       }
@@ -333,11 +334,19 @@ h4 {
 
         border-radius: 4px;
 
-        @media screen and (max-width: $tablet) {
-          margin-right: 1.3rem;
+        @media screen and (max-width: $medium-device),
+          (min-height: $landscape-table),
+          (max-width: $small-device) {
           padding: 0.3rem;
           border: 3px solid #5463ff;
           border-radius: 4px;
+          width: 90%;
+          top: 1.1rem;
+        }
+
+        @media screen and (max-width: $small-device) {
+          position: relative;
+          left: 1.5rem;
         }
       }
     }
@@ -351,22 +360,18 @@ h4 {
 
       padding: 0 2rem;
 
-      @media screen and (max-width: $tablet) {
-        align-items: center;
-      }
-
       @media screen and (max-width: $medium-device) {
+        flex: 1 0 10rem;
         padding: 0;
       }
 
       @media screen and (max-width: $small-device) {
-        padding: 0 2.3rem;
-        width: 80%;
-        margin: 0 auto;
+        margin: 0 2rem 2rem;
       }
 
       h2 {
         position: relative;
+        margin: 0.7rem 0;
       }
 
       h2:after {
@@ -382,42 +387,43 @@ h4 {
 
       p {
         font-size: 1.2rem;
-        width: 80%;
+        width: 90%;
         margin: 0.8rem 0;
-        text-align: left;
+        text-align: justify;
         padding-right: 3rem;
-        line-height: 1.9;
+        line-height: 2;
 
-        @media screen and (max-width: $tablet) {
-          width: 80%;
+        @media screen and (max-width: $medium-device),
+          (min-height: $landscape-table) {
+          font-size: 1rem;
           text-align: justify;
-          padding: 0 4rem;
+          margin: 0.2rem 0;
+          padding: 0 0.5rem 0 0;
+
+          width: 100%;
         }
 
         @media screen and (max-width: $small-device) {
-          width: 100%;
-          text-align: center;
-
-          font-size: 0.8rem;
-          padding: 0;
-          margin: 0.5rem 1.5rem;
+          font-size: 0.9rem;
           text-align: justify;
+          padding: 0;
+          line-height: 35px;
+          width: 100%;
         }
       }
 
       .contact-btn {
         position: relative;
         overflow: hidden;
-        border: 2px solid $dark-color;
+        border: 1px solid $dark-color;
         @extend %btn-shared;
         color: #444;
+        margin-top: 0.7rem;
 
-        @media screen and (max-width: $small-device) {
-          font-size: 0.7rem;
-        }
+        transition: $transition;
+
         @media screen and (max-width: $medium-device) {
           text-align: center;
-
           font-size: 0.9rem;
         }
 
@@ -436,12 +442,14 @@ h4 {
 
           color: $light-color;
 
-          transform: translateY(-100%);
+          transform: scale(0);
+          opacity: 0;
           transition: $transition;
         }
 
         &:hover:after {
-          transform: translateY(0);
+          transform: scale(100%);
+          opacity: 1;
           border: none;
         }
       }
@@ -547,9 +555,9 @@ h4 {
         }
 
         button[type='submit'] {
-          width: 100%;
+          width: 70%;
           margin-left: -5.5rem;
-          font-size: 1rem;
+          font-size: 0.8rem;
 
           @media screen and (max-width: 370px) {
             width: 100%;
@@ -680,16 +688,6 @@ h4 {
     transform: translateY(-0.5rem);
   }
 }
-
-//TODO
-.open {
-  width: 0;
-}
-//TODO
-.body-wrapper {
-  // transform: translateX(-50%);
-}
-
 .modal {
   position: fixed;
   height: 100%;
@@ -698,12 +696,44 @@ h4 {
   left: 0;
   background-color: #000000ad;
   opacity: 0;
+  z-index: -1;
+  transform: translateY(-100%);
+  transition: $transition;
+
+  &.open {
+    opacity: 1;
+    z-index: 100;
+    transform: translateY(0);
+  }
 
   &-container {
     width: 70%;
+    height: 40%;
     margin: 2rem auto;
-    min-height: 500px;
-    background-color: #5463ff;
+    min-height: 90%;
     border-radius: 5px;
+    z-index: 101;
+    overflow-y: scroll;
+    text-align: center;
+
+    @media screen and (max-height: $small-device) {
+      width: 100%;
+    }
+
+    .btn-download {
+      color: #fff;
+      background: $dark-color;
+      padding: 0.7rem 1rem;
+      border-radius: 3px;
+      transition: $transition;
+
+      &:hover {
+        background: lighten($dark-color, 5%);
+      }
+    }
+  }
+
+  &-content {
+    margin-bottom: 1.5rem;
   }
 }

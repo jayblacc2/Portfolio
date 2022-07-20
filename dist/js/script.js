@@ -1,8 +1,15 @@
+'use strict';
+
 //variables
 const scrollUp = document.querySelector('.scroll-up'),
+  logoBrand = document.querySelector('.logo-brand'),
   mobileMenu = document.querySelector('.menu-list'),
   menuIcon = document.querySelector('.menu-mobile'),
-  form = document.querySelector('form');
+  myResume = document.querySelector('#my-resume'),
+  form = document.querySelector('form'),
+  inputs = document.querySelectorAll('input'),
+  modal = document.querySelector('.modal'),
+  links = document.querySelectorAll('.menu-item--link');
 
 AOS.init({
   delay: 0,
@@ -14,20 +21,25 @@ AOS.init({
 /**/
 
 menuIcon.addEventListener('click', () => {
-  // if (mobileMenu.style.width == 1) {
-  //   mobileMenu.style.width = '100%';
-  // } else {
-  //   mobileMenu.style.width = 0;
-  // }
-
   if (mobileMenu.style.width === '100%') {
     mobileMenu.style.width = '0%';
   } else {
     mobileMenu.style.width = '100%';
+    closeMobileMenu();
   }
 });
 
 document.addEventListener('scroll', slideUpBtn);
+
+myResume.addEventListener('click', () => {
+  addModalClass(modal, 'open');
+});
+
+modal.addEventListener('click', () => {
+  modal.classList.remove('open');
+  document.body.style['overflow'] = 'scroll';
+});
+
 // scrollT to Top button
 function slideUpBtn() {
   if (
@@ -40,14 +52,23 @@ function slideUpBtn() {
   }
 }
 
-form.addEventListener('submit', () => {
-  const inputs = (document.querySelectorAll('input').value = '');
-  const textarea = (document.querySelector('textarea').value = '');
-  console.log(inputs);
+function addModalClass(selector, classSelector) {
+  selector.classList.add(classSelector);
+  document.body.style['overflow'] = 'hidden';
+}
 
-  setTimeout(() => {
-    inputs.forEach((input) => {
-      return (input.value = '');
+function closeMobileMenu() {
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      mobileMenu.style.width = '0%';
     });
-  }, 3000);
+  });
+}
+
+//form event listener
+document.querySelector('#btn-submit').addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (inputs[0].value) {
+    console.log('enpty');
+  }
 });

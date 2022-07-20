@@ -7,17 +7,18 @@
 
 %btn-shared {
   display: inline-block;
+  text-transform: uppercase;
 
   color: #fff;
   font-weight: 600;
 
-  padding: 0.7rem 1.7rem;
+  padding: 0.6rem 1.4rem;
 
   cursor: pointer;
   border: none;
   border-radius: 3px;
 
-  transition: all 0.5s ease;
+  transition: $transition;
 
   @media screen and (max-width: $medium-device) {
     padding: 0.5rem 1.2rem;
@@ -46,13 +47,18 @@
 
   &-outline {
     @extend %btn-shared;
-    background-color: transparent;
-    outline: 1px solid $light-color;
+    background-color: $main-color;
+    border: 2px solid transparent;
     transition: $transition;
 
+    -webkit-animation: color-change 2s linear infinite alternate both,
+      scale-up 0.6s linear infinite alternate both;
+    animation: color-change 2s linear infinite alternate both,
+      scale-up 0.6s linear infinite alternate both;
+
     &:hover {
-      background-color: $light-color;
-      color: $dark-color;
+      color: $medium-color;
+      box-shadow: $btn-box-shadow;
     }
   }
 }
@@ -76,7 +82,18 @@
 
 .lead {
   font-size: 1.3rem;
-  margin-bottom: 2rem;
+  padding: 1rem 0;
+
+  line-height: 32px;
+
+  @media screen and (max-width: $medium-device) {
+    font-size: 1.1rem;
+  }
+
+  @media screen and (max-width: $small-device) {
+    padding: 1rem 1.1rem;
+    font-size: 1.1rem;
+  }
 }
 .text-center {
   text-align: center;
@@ -145,11 +162,51 @@
 .bg {
   &-light {
     background: $light-color;
-    color: $dark-color;
+    color: #242323;
   }
 
   &-gradient {
     background: $bg-gradient;
     color: $light-color;
+  }
+}
+
+@-webkit-keyframes scale-up {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    background: $main-color;
+  }
+  100% {
+    background: lighten($main-color, 15%);
+  }
+}
+@keyframes color-change {
+  0% {
+    background: $main-color;
+  }
+
+  100% {
+    background: lighten($main-color, 15%);
   }
 }

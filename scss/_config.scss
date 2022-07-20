@@ -7,8 +7,9 @@ $medium-color: #ccc;
 $dark-color: #333;
 $btn-box-shadow: 5px 5px 15px rgba($medium-color, $alpha: 0.3);
 $transition: all 0.3s ease;
+
 //media query variables
-$small-device: 600px;
+$small-device: 576px;
 $medium-device: 800px; //820px;
 $tablet: 1200px;
 $landscape-table: 1180px;
