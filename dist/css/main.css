@@ -618,9 +618,9 @@ h4 {
         font-size: 0.8rem;
         margin: 0; } }
     #contact .contact-form form button[type='submit'] {
-      width: 100%;
+      width: 70%;
       margin-left: -5.5rem;
-      font-size: 1rem; }
+      font-size: 0.8rem; }
       @media screen and (max-width: 370px) {
         #contact .contact-form form button[type='submit'] {
           width: 100%;
