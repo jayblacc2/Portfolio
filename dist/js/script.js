@@ -7,7 +7,7 @@ const scrollUp = document.querySelector('.scroll-up'),
   menuIcon = document.querySelector('.menu-mobile'),
   myResume = document.querySelector('#my-resume'),
   form = document.querySelector('form'),
-  inputs = document.querySelectorAll('input'),
+  inputs = document.querySelectorAll('.validate-input'),
   modal = document.querySelector('.modal'),
   links = document.querySelectorAll('.menu-item--link');
 
@@ -64,11 +64,3 @@ function closeMobileMenu() {
     });
   });
 }
-
-//form event listener
-document.querySelector('#btn-submit').addEventListener('submit', (e) => {
-  e.preventDefault();
-  if (inputs[0].value) {
-    console.log('enpty');
-  }
-});

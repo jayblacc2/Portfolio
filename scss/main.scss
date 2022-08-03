@@ -585,8 +585,8 @@ h4 {
     input,
     textarea {
       border-radius: 3px;
-      border: none;
-      outline: 1px solid transparent;
+      border: 2px solid transparent;
+      outline: none;
       transition: all 0.5s ease;
       font: inherit;
       font-size: 0.9rem;
@@ -594,11 +594,11 @@ h4 {
 
       font-family: 'Dosis', sans-serif;
       background-color: #f4f4f4f3;
+      transition: $transition;
 
       &:focus {
-        outline-color: $main-color;
-
-        transition: $transition;
+        border-color: $main-color;
+        border-radius: 3px;
       }
 
       @media screen and (max-width: 370px) {

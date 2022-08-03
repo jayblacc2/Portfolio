@@ -638,18 +638,19 @@ h4 {
   #contact .text-fields input,
   #contact .text-fields textarea {
     border-radius: 3px;
-    border: none;
-    outline: 1px solid transparent;
+    border: 2px solid transparent;
+    outline: none;
     transition: all 0.5s ease;
     font: inherit;
     font-size: 0.9rem;
     font-weight: 500;
     font-family: 'Dosis', sans-serif;
-    background-color: #f4f4f4f3; }
+    background-color: #f4f4f4f3;
+    transition: all 0.3s ease; }
     #contact .text-fields input:focus,
     #contact .text-fields textarea:focus {
-      outline-color: #5e3aee;
-      transition: all 0.3s ease; }
+      border-color: #5e3aee;
+      border-radius: 3px; }
     @media screen and (max-width: 370px) {
       #contact .text-fields input,
       #contact .text-fields textarea {
