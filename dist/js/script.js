@@ -11,13 +11,6 @@ const scrollUp = document.querySelector('.scroll-up'),
   modal = document.querySelector('.modal'),
   links = document.querySelectorAll('.menu-item--link');
 
-AOS.init({
-  delay: 0,
-  duration: 800,
-  easing: 'ease',
-  once: false,
-  mirror: false,
-});
 /**/
 
 menuIcon.addEventListener('click', () => {
